@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Avatar from "react-avatar";
 import { Link } from "react-router-dom";
 import { useGetAllPostsQuery } from "../../features/postApi";
 import "./AllMails.css";
 import { useDispatch } from "react-redux";
 import { addFavourite } from "../../features/favouriteSlice";
+import { addRead } from "../../features/readSlice";
 
 const AllMails = () => {
   const { data, error, isLoading } = useGetAllPostsQuery();
@@ -27,6 +28,9 @@ const AllMails = () => {
 
   const handleAddToFavourite = (mail) => {
     dispatch(addFavourite(mail));
+  };
+  const handleAddToRead = (mail) => {
+    dispatch(addRead(mail));
   };
 
   return (
@@ -56,7 +60,8 @@ const AllMails = () => {
                   <div className="mail_body">{mail.short_description}</div>
                   </Link>
                   <div className="mail_date">{mail.date}
-                  <p onClick={()=>handleAddToFavourite(mail)} className='allmails_button'>Favourites</p></div>
+                  <p onClick={()=>handleAddToFavourite(mail)} className='allmails_button'>Favourites</p>
+                  <p onClick={()=>handleAddToRead(mail)} className='allmails_button'>Read</p></div>
                 </div>
               
               
