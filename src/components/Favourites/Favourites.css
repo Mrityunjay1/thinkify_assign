@@ -3,3 +3,18 @@
     cursor: pointer;
     margin-left: 15px;
 }
+.favourites_nothing{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+.start_adding{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted blueviolet;
+    border-radius: 25px;
+    width: 20%;
+    margin: auto;
+}

@@ -16,14 +16,18 @@ const Favourites = () => {
     <div className='favourites_contaner'>
         <h2>Favourites</h2>
         {favourites.posts.length === 0 ? (
+            <div className='favourites_nothing'>
             <div>
                 <p>
                     No Emails In your Favourites
                 </p>
             <div>
                 <Link to='/'>
-                    <p>Start adding to Favourites</p>
+                    <p className='start_adding'>
+                    <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-arrow-arrows-those-icons-lineal-color-those-icons-3.png" alt='arrow'/>
+                    Start adding to Favourites</p>
                 </Link>
+            </div>
             </div>
             </div>
         ):(

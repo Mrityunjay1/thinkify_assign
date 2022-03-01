@@ -14,7 +14,7 @@ const Navbar = () => {
           </Link>
             <li className='nav_li'>Read</li>
             <li className='nav_li' >Unread</li>
-            <Link to='/favourites'><li className='nav_li' style={toggle &&{background:'red'}}>Favourites</li></Link>
+            <Link to='/favourites'><li className='nav_li'>Favourites</li></Link>
         </ul>
     </div>
   )
