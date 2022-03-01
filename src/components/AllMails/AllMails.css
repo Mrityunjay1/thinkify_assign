@@ -1,0 +1,17 @@
+.mail_container{
+    display: flex;
+    margin-top: 15px;
+    padding: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+}
+.mail_all{
+    margin-left: 10px;
+    line-height: 25px;
+}
+.mail_from{
+    font-weight: 400;
+}
+.mail_from_span{
+    font-weight: 500;
+}
