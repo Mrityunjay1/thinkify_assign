@@ -1,4 +1,5 @@
 import React from 'react'
+import Avatar from 'react-avatar'
 import { useParams } from 'react-router-dom'
 import {useGetPostByIdQuery } from '../../features/postApi'
 import AllMails from '../AllMails/AllMails'
@@ -19,6 +20,7 @@ const Mails = () => {
     <div className='mails_main_container'>
         {isLoading ? <p>Loading...</p> : error ? <p>An Error Occured{error.data}</p>: 
                 <div className='mail_container' key={list.id}>
+                  <Avatar name={list.id} size={50} round={true} />
                     <div className='mail_all'>
                         <div className='mail_from'>{list.body}</div>
                         {/* <div className='mail_subject'>Subject: {data.list.subject}</div>
