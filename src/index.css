@@ -5,8 +5,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+a{
+  color: black;
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
+button:hover{
+  opacity: 0.8;
 }
 
 body{
   font-family: 'Fredoka', sans-serif;
+  text-decoration: none;
 }

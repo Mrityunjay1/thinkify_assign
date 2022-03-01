@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
 const initialState = {
-    posts: [],
+    posts: localStorage.getItem("favouritePosts")?JSON.parse(localStorage.getItem("favouritePosts")):[],
     loading: false,
     error: null,
 };
@@ -25,9 +25,19 @@ const favouriteSlice = createSlice({
                 position: "bottom-left"
             })
             }
+
+            localStorage.setItem("favouritePosts",JSON.stringify(state.posts));
+        },
+        removeFavourite: (state, action) => {
+        const removePostItems =state.posts.filter(post => post.id !== action.payload.id);
+        state.posts=removePostItems;
+        localStorage.setItem("favouritePosts",JSON.stringify(state.posts));
+        toast.error("Removed from favourite",{
+            position: "bottom-left"
+        })
         }
     }
 })
 
-export const { addFavourite } = favouriteSlice.actions;
+export const { addFavourite ,removeFavourite} = favouriteSlice.actions;
 export default favouriteSlice.reducer;

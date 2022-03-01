@@ -5,16 +5,18 @@ import Navbar from './components/Navbar/Navbar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Mails from './components/Mails/Mails';
 import{ToastContainer} from 'react-toastify';
+import Favourites from './components/Favourites/Favourites';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Router>
+      <Navbar />
         <ToastContainer />
         <Switch>
           <Route path="/" exact component={AllMails} />
-          <Route path="/mail" component={Mails} />
+          <Route path="/mail/:id" component={Mails} />
+          <Route path='/favourites' component={Favourites} />
         </Switch>
       </Router>
     </div>

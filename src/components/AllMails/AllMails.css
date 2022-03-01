@@ -15,3 +15,12 @@
 .mail_from_span{
     font-weight: 500;
 }
+.allmails_button{
+   margin-left: 10px;
+   color: #E54065;
+   text-align: center;
+   cursor: pointer;
+}
+.mail_date{
+    display: flex;
+}
